@@ -28,14 +28,14 @@ const Navigation = () => {
     <motion.nav 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled 
-          ? 'bg-black/10 backdrop-blur-xl border-b border-white/10' 
-          : 'bg-transparent'
+          ? 'bg-black/5 backdrop-blur-md' 
+          : ''
       }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.8 }}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link href="/" className="group flex items-center gap-2">
@@ -48,22 +48,23 @@ const Navigation = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-1">
+          <div className="hidden md:flex items-center space-x-2">
             {navItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="relative px-4 py-2 text-white/80 hover:text-white transition-colors font-medium group"
+                className="relative px-5 py-3 text-white hover:text-purple-300 transition-all duration-300 font-bold text-lg group"
               >
-                <span className="relative z-10">{item.label}</span>
-                <div className="absolute inset-0 bg-white/10 backdrop-blur-md rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-300 scale-95 group-hover:scale-100"></div>
+                <span className="relative z-10 drop-shadow-sm">{item.label}</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-pink-500/20 backdrop-blur-md rounded-xl opacity-0 group-hover:opacity-100 transition-all duration-300 scale-90 group-hover:scale-100 border border-white/10"></div>
+                <div className="absolute inset-0 bg-white/5 rounded-xl opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
               </Link>
             ))}
             
             {/* CTA Button */}
             <Link
               href="/contact"
-              className="ml-4 px-6 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full font-semibold hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300 transform hover:scale-105"
+              className="ml-4 px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full font-semibold hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
             >
               Hire Me
             </Link>
@@ -100,7 +101,7 @@ const Navigation = () => {
                 >
                   <Link
                     href={item.href}
-                    className="block px-4 py-3 text-white hover:text-purple-400 hover:bg-white/10 rounded-xl transition-all duration-300 font-medium"
+                    className="block px-5 py-4 text-white hover:text-purple-300 hover:bg-gradient-to-r hover:from-purple-500/20 hover:to-pink-500/20 rounded-xl transition-all duration-300 font-bold text-lg border border-transparent hover:border-white/10"
                     onClick={() => setIsOpen(false)}
                   >
                     {item.label}
