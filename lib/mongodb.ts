@@ -1,6 +1,8 @@
 import mongoose from 'mongoose';
+import getConfig from 'next/config';
 
-const MONGODB_URI = process.env.MONGODB_URI!;
+const { publicRuntimeConfig, serverRuntimeConfig } = getConfig();
+const MONGODB_URI = serverRuntimeConfig.MONGODB_URI || publicRuntimeConfig.MONGODB_URI;
 
 if (!MONGODB_URI) {
   throw new Error(

@@ -1,4 +1,5 @@
-import type { Metadata } from 'next';
+import { Metadata } from 'next';
+import getConfig from 'next/config';
 
 export const metadata: Metadata = {
   title: 'Contact | Silambarasu - Get In Touch',
@@ -7,7 +8,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Contact | Silambarasu - Get In Touch',
     description: 'Get in touch for web development projects, collaborations, or opportunities.',
-    url: `${process.env.NEXT_PUBLIC_PORTFOLIO_URL}/contact`,
+    url: `${getConfig().publicRuntimeConfig.NEXT_PUBLIC_PORTFOLIO_URL}/contact`,
     images: ['/og-image.svg'],
   },
 };

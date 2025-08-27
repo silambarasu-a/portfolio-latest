@@ -1,12 +1,17 @@
-import { Github, Linkedin, Mail, Twitter, Heart } from 'lucide-react';
+"use client";
+
+import { Github, Linkedin, Twitter, Mail, Heart } from 'lucide-react';
+import getConfig from 'next/config';
 import Logo from './Logo';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
+  const { publicRuntimeConfig } = getConfig();
+  
   const socialLinks = [
-    { href: process.env.NEXT_PUBLIC_GITHUB_URL, icon: Github, label: 'GitHub', color: 'hover:text-gray-300' },
-    { href: process.env.NEXT_PUBLIC_LINKEDIN_URL, icon: Linkedin, label: 'LinkedIn', color: 'hover:text-blue-400' },
+    { href: publicRuntimeConfig.NEXT_PUBLIC_GITHUB_URL, icon: Github, label: 'GitHub', color: 'hover:text-gray-300' },
+    { href: publicRuntimeConfig.NEXT_PUBLIC_LINKEDIN_URL, icon: Linkedin, label: 'LinkedIn', color: 'hover:text-blue-400' },
     { href: 'https://twitter.com/silambarasu', icon: Twitter, label: 'Twitter', color: 'hover:text-cyan-400' },
     { href: 'mailto:silambarasu@icloud.com', icon: Mail, label: 'Email', color: 'hover:text-purple-400' }
   ];
