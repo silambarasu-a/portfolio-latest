@@ -3,8 +3,11 @@
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Code2, Rocket, Sparkles, Star, Zap, ChevronRight, Play } from 'lucide-react';
+import AnimatedElement from '@/components/AnimatedElement';
+import { useAnimationContext } from '@/components/AnimationProvider';
 
 export default function Home() {
+  const { isPageLoaded } = useAnimationContext();
   const skills = [
     { 
       icon: Code2, 
@@ -52,9 +55,9 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           
           {/* Floating Badge */}
-          <motion.div
+          <AnimatedElement
             initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
+            animate={isPageLoaded ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
             transition={{ duration: 0.8 }}
             className="mb-8"
           >
@@ -63,12 +66,12 @@ export default function Home() {
               Available for new projects
               <Sparkles className="w-4 h-4 text-purple-400" />
             </div>
-          </motion.div>
+          </AnimatedElement>
 
           {/* Main Heading */}
-          <motion.div
+          <AnimatedElement
             initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            animate={isPageLoaded ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <h1 className="text-5xl sm:text-7xl lg:text-8xl font-black mb-6 leading-tight">
@@ -84,13 +87,13 @@ export default function Home() {
               Full Stack Developer at Starlight Music with 3+ years of experience architecting customer-facing platforms, 
               optimizing performance by 40%, and building secure APIs handling 1,000+ daily requests with 99.9% uptime.
             </p>
-          </motion.div>
+          </AnimatedElement>
           
           {/* CTA Buttons */}
-          <motion.div 
+          <AnimatedElement 
             className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16"
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            animate={isPageLoaded ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
             <Link
@@ -114,12 +117,12 @@ export default function Home() {
                 Let&apos;s Talk
               </div>
             </Link>
-          </motion.div>
+          </AnimatedElement>
 
           {/* Stats */}
-          <motion.div
+          <AnimatedElement
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            animate={isPageLoaded ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.8, delay: 0.8 }}
             className="grid grid-cols-3 gap-8 max-w-lg mx-auto"
           >
@@ -135,7 +138,7 @@ export default function Home() {
               <div className="text-3xl font-bold text-white mb-1">99.9%</div>
               <div className="text-gray-400 text-sm">Uptime</div>
             </div>
-          </motion.div>
+          </AnimatedElement>
         </div>
         
         {/* Scroll Indicator */}
@@ -153,11 +156,8 @@ export default function Home() {
       {/* Skills Section */}
       <section className="py-24 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+          <AnimatedElement
+            delay={0}
             className="text-center mb-16"
           >
             <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
@@ -167,18 +167,15 @@ export default function Home() {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Combining cutting-edge technology with creative problem-solving to build exceptional digital experiences.
             </p>
-          </motion.div>
+          </AnimatedElement>
           
           <div className="grid md:grid-cols-3 gap-8">
             {skills.map((skill, index) => {
               const IconComponent = skill.icon;
               return (
-                <motion.div
+                <AnimatedElement
                   key={skill.name}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.2 }}
-                  viewport={{ once: true }}
+                  delay={index * 0.2}
                   className="group relative"
                 >
                   <div className="absolute inset-0 bg-gradient-to-r opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-3xl blur"></div>
@@ -193,7 +190,7 @@ export default function Home() {
                       {skill.description}
                     </p>
                   </div>
-                </motion.div>
+                </AnimatedElement>
               );
             })}
           </div>
@@ -203,11 +200,7 @@ export default function Home() {
       {/* CTA Section */}
       <section className="py-24 relative">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+          <AnimatedElement
             className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-xl border border-white/10 rounded-3xl p-12"
           >
             <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
@@ -225,7 +218,7 @@ export default function Home() {
               Start Your Project
               <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
-          </motion.div>
+          </AnimatedElement>
         </div>
       </section>
     </div>

@@ -1,9 +1,9 @@
 'use client';
 
 import React from 'react';
-import { motion } from 'framer-motion';
 import { ExternalLink, Github, Rocket, Sparkles, Star, Zap, ChevronRight, Eye } from 'lucide-react';
 import Link from 'next/link';
+import AnimatedElement from '@/components/AnimatedElement';
 
 const projects = [
   {
@@ -95,10 +95,7 @@ export default function Projects() {
       {/* Hero Section */}
       <section className="pt-32 pb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <AnimatedElement
             className="text-center"
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-md rounded-full border border-white/20 text-white/90 text-sm font-medium mb-8">
@@ -118,17 +115,15 @@ export default function Projects() {
               A showcase of my recent work and passion projects. Each one represents 
               a unique challenge solved with modern technology and creative thinking.
             </p>
-          </motion.div>
+          </AnimatedElement>
         </div>
       </section>
 
       {/* Filter Buttons */}
       <section className="pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+          <AnimatedElement
+            delay={0.2}
             className="flex flex-wrap justify-center gap-4"
           >
             {categories.map((category) => (
@@ -147,7 +142,7 @@ export default function Projects() {
                 )}
               </button>
             ))}
-          </motion.div>
+          </AnimatedElement>
         </div>
       </section>
 
@@ -156,12 +151,9 @@ export default function Projects() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredProjects.map((project, index) => (
-              <motion.div
+              <AnimatedElement
                 key={project.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                delay={index * 0.1}
                 className="group relative"
               >
                 <div className="relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl overflow-hidden hover:bg-white/10 transition-all duration-500 transform hover:scale-105">
@@ -259,7 +251,7 @@ export default function Projects() {
                     </div>
                   </div>
                 </div>
-              </motion.div>
+              </AnimatedElement>
             ))}
           </div>
         </div>
@@ -268,11 +260,7 @@ export default function Projects() {
       {/* Call to Action */}
       <section className="py-24">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+          <AnimatedElement
             className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-xl border border-white/10 rounded-3xl p-12"
           >
             <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
@@ -291,7 +279,7 @@ export default function Projects() {
               Let&apos;s Talk
               <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
-          </motion.div>
+          </AnimatedElement>
         </div>
       </section>
     </div>
