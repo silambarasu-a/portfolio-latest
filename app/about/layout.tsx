@@ -1,5 +1,4 @@
 import { Metadata } from 'next';
-import getConfig from 'next/config';
 
 export const metadata: Metadata = {
   title: 'About | Silambarasu - Full Stack Developer at Starlight Music',
@@ -8,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'About | Silambarasu - Full Stack Developer at Starlight Music',
     description: 'Learn about my journey as a full-stack developer with 3+ years of experience at Starlight Music building scalable platforms.',
-    url: `${getConfig().publicRuntimeConfig.NEXT_PUBLIC_PORTFOLIO_URL}/about`,
+    url: `${process.env.NEXT_PUBLIC_PORTFOLIO_URL}/about`,
     images: ['/og-image.svg'],
   },
 };

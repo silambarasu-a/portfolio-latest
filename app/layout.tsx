@@ -15,12 +15,8 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-import getConfig from 'next/config';
-
-const { publicRuntimeConfig } = getConfig();
-
 export const metadata: Metadata = {
-  metadataBase: new URL(publicRuntimeConfig.NEXT_PUBLIC_PORTFOLIO_URL || 'http://localhost:3000'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_PORTFOLIO_URL || 'http://localhost:3000'),
   title: "Silambarasu Arunkumaravel | Full Stack Developer",
   description: "Innovative Full Stack Developer with 3+ years experience in React, Next.js, Node.js. Expert in JavaScript, TypeScript, MongoDB, and cloud deployment. Based in Bangalore, India.",
   keywords: "silambarasu arunkumaravel, full stack developer, react developer, nextjs, nodejs, javascript, typescript, mongodb, bangalore developer, starlight music, web developer",
@@ -38,7 +34,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: publicRuntimeConfig.NEXT_PUBLIC_PORTFOLIO_URL,
+    url: process.env.NEXT_PUBLIC_PORTFOLIO_URL,
     siteName: "Silambarasu Arunkumaravel Portfolio",
     title: "Silambarasu Arunkumaravel | Full Stack Developer",
     description: "Innovative Full Stack Developer with 3+ years experience in React, Next.js, Node.js. Expert in JavaScript, TypeScript, MongoDB, and cloud deployment.",

@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import connectDB from '@/lib/mongodb';
 import Contact from '@/models/Contact';
+import emailService from '@/lib/emailService';
 
 export async function POST(request: NextRequest) {
   try {
@@ -35,7 +36,22 @@ export async function POST(request: NextRequest) {
       message: message.trim()
     });
 
-    await newContact.save();
+    // Save to database
+    const savedContact = await newContact.save();
+
+    // Send email notification (non-blocking)
+    try {
+      await emailService.sendContactFormNotification({
+        name: savedContact.name,
+        email: savedContact.email,
+        subject: savedContact.subject,
+        message: savedContact.message,
+      });
+      console.log('Email notification sent successfully for contact:', savedContact._id);
+    } catch (emailError) {
+      // Log email error but don't fail the API request
+      console.error('Failed to send email notification for contact:', savedContact._id, emailError);
+    }
 
     return NextResponse.json(
       { 

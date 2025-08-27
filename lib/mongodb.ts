@@ -1,14 +1,15 @@
 import mongoose from 'mongoose';
-import getConfig from 'next/config';
 
-const { publicRuntimeConfig, serverRuntimeConfig } = getConfig();
-const MONGODB_URI = serverRuntimeConfig.MONGODB_URI || publicRuntimeConfig.MONGODB_URI;
+const MONGODB_URI = process.env.MONGODB_URI;
 
 if (!MONGODB_URI) {
   throw new Error(
     'Please define the MONGODB_URI environment variable inside .env.local'
   );
 }
+
+// TypeScript assertion after null check
+const mongodbURI: string = MONGODB_URI;
 
 interface MongooseCache {
   conn: typeof mongoose | null;
@@ -38,7 +39,7 @@ async function connectDB() {
       bufferCommands: false,
     };
 
-    cached.promise = mongoose.connect(MONGODB_URI, opts).then((mongoose) => {
+    cached.promise = mongoose.connect(mongodbURI, opts).then((mongoose) => {
       return mongoose;
     });
   }
