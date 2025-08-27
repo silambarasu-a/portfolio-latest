@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="og-title og-desc">
+  <title id="og-title">Silambarasu Arunkumaravel — Full-Stack Web Developer & Nature Lover</title>
+  <desc id="og-desc">OpenGraph image with logo, code brackets and sprout icon, name and tagline on a gradient background.</desc>
+
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f0f23"/>
+      <stop offset="50%" stop-color="#1a1a2e"/>
+      <stop offset="100%" stop-color="#16213e"/>
+    </linearGradient>
+    <linearGradient id="leafGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#22d3ee"/>
+    </linearGradient>
+    <style>
+      .bracket{fill:none;stroke:#ffffff;stroke-width:8;stroke-linecap:round;stroke-linejoin:round}
+      .stem{fill:none;stroke:#ffffff;stroke-width:6;stroke-linecap:round}
+      .leaf{fill:url(#leafGrad)}
+      .name{font:700 48px ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial; fill:#ffffff}
+      .tag{font:600 24px ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial; fill:#cbd5e1; letter-spacing:2px}
+      .subtitle{font:400 20px ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial; fill:#94a3b8}
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGrad)"/>
+  
+  <!-- Decorative elements -->
+  <circle cx="100" cy="100" r="2" fill="#10b981" opacity="0.6"/>
+  <circle cx="1100" cy="530" r="3" fill="#22d3ee" opacity="0.4"/>
+  <circle cx="200" cy="500" r="1.5" fill="#ffffff" opacity="0.3"/>
+  <circle cx="1000" cy="150" r="2.5" fill="#10b981" opacity="0.5"/>
+
+  <!-- Main content centered -->
+  <g transform="translate(600, 315)">
+    
+    <!-- Logo icon centered -->
+    <g transform="translate(-100, -80)">
+      <path class="bracket" d="M50 15 L25 50 L50 85"/>
+      <path class="bracket" d="M95 15 L120 50 L95 85"/>
+      <path class="stem" d="M72.5 82 C72.5 72 72.5 62 72.5 50"/>
+      <path class="leaf" d="M72.5 53 C62 49, 52 57, 54 68 C64 68, 70 62, 72.5 53 Z"/>
+      <path class="leaf" d="M72.5 61 C83 57, 91 64, 90 74 C81 74, 76 68, 72.5 61 Z"/>
+    </g>
+
+    <!-- Text content -->
+    <g transform="translate(-400, -20)">
+      <text class="name" x="0" y="0" text-anchor="start">Silambarasu Arunkumaravel</text>
+      <text class="tag" x="0" y="40" text-anchor="start">FULL-STACK WEB DEVELOPER • NATURE LOVER</text>
+      <text class="subtitle" x="0" y="75" text-anchor="start">React • Next.js • Node.js • TypeScript • MongoDB</text>
+    </g>
+    
+  </g>
+
+</svg>

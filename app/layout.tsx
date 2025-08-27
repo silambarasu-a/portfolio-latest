@@ -15,6 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_PORTFOLIO_URL || 'http://localhost:3000'),
   title: "Silambarasu Arunkumaravel | Full Stack Developer",
   description: "Innovative Full Stack Developer with 3+ years experience in React, Next.js, Node.js. Expert in JavaScript, TypeScript, MongoDB, and cloud deployment. Based in Bangalore, India.",
   keywords: "silambarasu arunkumaravel, full stack developer, react developer, nextjs, nodejs, javascript, typescript, mongodb, bangalore developer, starlight music, web developer",
@@ -38,10 +39,10 @@ export const metadata: Metadata = {
     description: "Innovative Full Stack Developer with 3+ years experience in React, Next.js, Node.js. Expert in JavaScript, TypeScript, MongoDB, and cloud deployment.",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/og-image.svg",
         width: 1200,
         height: 630,
-        alt: "Silambarasu Arunkumaravel Portfolio"
+        alt: "Silambarasu Arunkumaravel — Full-Stack Web Developer & Nature Lover"
       }
     ]
   },
@@ -49,7 +50,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Silambarasu Arunkumaravel | Full Stack Developer",
     description: "Innovative Full Stack Developer with 3+ years experience in React, Next.js, Node.js. Expert in JavaScript, TypeScript, MongoDB, and cloud deployment.",
-    images: ["/og-image.jpg"],
+    images: ["/og-image.svg"],
   },
   robots: {
     index: true,

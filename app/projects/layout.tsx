@@ -8,6 +8,7 @@ export const metadata: Metadata = {
     title: 'Projects | Silambarasu - Full Stack Web Development Showcase',
     description: 'Explore my portfolio of web development projects including music streaming platforms, artist dashboards, and APIs built for Starlight Music.',
     url: `${process.env.NEXT_PUBLIC_PORTFOLIO_URL}/projects`,
+    images: ['/og-image.svg'],
   },
 };
 
