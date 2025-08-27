@@ -1,13 +1,14 @@
-import { Github, Linkedin, Mail, Twitter, Heart, Sparkles } from 'lucide-react';
+import { Github, Linkedin, Mail, Twitter, Heart } from 'lucide-react';
+import Logo from './Logo';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    { href: 'https://github.com', icon: Github, label: 'GitHub', color: 'hover:text-gray-300' },
-    { href: 'https://linkedin.com', icon: Linkedin, label: 'LinkedIn', color: 'hover:text-blue-400' },
-    { href: 'https://twitter.com', icon: Twitter, label: 'Twitter', color: 'hover:text-cyan-400' },
-    { href: 'mailto:contact@yourportfolio.com', icon: Mail, label: 'Email', color: 'hover:text-purple-400' }
+    { href: process.env.NEXT_PUBLIC_GITHUB_URL, icon: Github, label: 'GitHub', color: 'hover:text-gray-300' },
+    { href: process.env.NEXT_PUBLIC_LINKEDIN_URL, icon: Linkedin, label: 'LinkedIn', color: 'hover:text-blue-400' },
+    { href: 'https://twitter.com/silambarasu', icon: Twitter, label: 'Twitter', color: 'hover:text-cyan-400' },
+    { href: 'mailto:silambarasu@icloud.com', icon: Mail, label: 'Email', color: 'hover:text-purple-400' }
   ];
 
   return (
@@ -19,12 +20,14 @@ const Footer = () => {
         <div className="flex flex-col items-center space-y-8">
           
           {/* Logo/Brand */}
-          <div className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center">
-              <Sparkles className="w-5 h-5 text-white" />
-            </div>
+          <div className="flex items-center gap-3">
+            <Logo 
+              variant="icon" 
+              width={44} 
+              color="white"
+            />
             <span className="font-black text-2xl text-white">
-              DevPort
+              Silambarasu
             </span>
           </div>
 
@@ -61,7 +64,7 @@ const Footer = () => {
           {/* Copyright */}
           <div className="flex flex-col sm:flex-row items-center gap-4 text-sm text-gray-400">
             <div className="flex items-center gap-1">
-              © {currentYear} DevPort. Made with 
+              © {currentYear} Silambarasu. Made with 
               <Heart className="w-4 h-4 text-red-400 mx-1" fill="currentColor" />
               and lots of ☕
             </div>

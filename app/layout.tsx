@@ -15,37 +15,40 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Your Portfolio | Full Stack Developer",
-  description: "Professional portfolio showcasing full-stack development projects and skills",
-  keywords: "full stack developer, react, nextjs, nodejs, mongodb, portfolio",
-  authors: [{ name: "Your Name" }],
-  creator: "Your Name",
-  publisher: "Your Name",
+  title: "Silambarasu Arunkumaravel | Full Stack Developer",
+  description: "Innovative Full Stack Developer with 3+ years experience in React, Next.js, Node.js. Expert in JavaScript, TypeScript, MongoDB, and cloud deployment. Based in Bangalore, India.",
+  keywords: "silambarasu arunkumaravel, full stack developer, react developer, nextjs, nodejs, javascript, typescript, mongodb, bangalore developer, starlight music, web developer",
+  authors: [{ name: "Silambarasu Arunkumaravel" }],
+  creator: "Silambarasu Arunkumaravel",
+  publisher: "Silambarasu Arunkumaravel",
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
+  icons: {
+    icon: '/favicon.svg'
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://yourportfolio.com",
-    siteName: "Your Portfolio",
-    title: "Your Portfolio | Full Stack Developer",
-    description: "Professional portfolio showcasing full-stack development projects and skills",
+    url: process.env.NEXT_PUBLIC_PORTFOLIO_URL,
+    siteName: "Silambarasu Arunkumaravel Portfolio",
+    title: "Silambarasu Arunkumaravel | Full Stack Developer",
+    description: "Innovative Full Stack Developer with 3+ years experience in React, Next.js, Node.js. Expert in JavaScript, TypeScript, MongoDB, and cloud deployment.",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Your Portfolio"
+        alt: "Silambarasu Arunkumaravel Portfolio"
       }
     ]
   },
   twitter: {
     card: "summary_large_image",
-    title: "Your Portfolio | Full Stack Developer",
-    description: "Professional portfolio showcasing full-stack development projects and skills",
+    title: "Silambarasu Arunkumaravel | Full Stack Developer",
+    description: "Innovative Full Stack Developer with 3+ years experience in React, Next.js, Node.js. Expert in JavaScript, TypeScript, MongoDB, and cloud deployment.",
     images: ["/og-image.jpg"],
   },
   robots: {

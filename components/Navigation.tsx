@@ -3,7 +3,8 @@
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Sparkles } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
+import Logo from './Logo';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -38,12 +39,15 @@ const Navigation = () => {
       <div className="w-full px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <Link href="/" className="group flex items-center gap-2">
-            <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
-              <Sparkles className="w-4 h-4 text-white" />
-            </div>
-            <span className="font-black text-xl text-white group-hover:text-purple-400 transition-colors">
-              DevPort
+          <Link href="/" className="group flex items-center">
+            <Logo 
+              variant="icon" 
+              width={40} 
+              color="white" 
+              className="group-hover:text-purple-400 transition-colors duration-300" 
+            />
+            <span className="ml-3 font-black text-xl text-white group-hover:text-purple-400 transition-colors">
+              Silambarasu
             </span>
           </Link>
 

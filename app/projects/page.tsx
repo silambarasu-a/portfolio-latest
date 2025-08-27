@@ -8,9 +8,9 @@ import Link from 'next/link';
 const projects = [
   {
     id: 1,
-    title: 'E-Commerce Platform',
-    description: 'Full-stack e-commerce application with cart functionality, payment integration, and admin dashboard. Built for scalability and performance.',
-    technologies: ['Next.js', 'MongoDB', 'Stripe', 'Tailwind CSS'],
+    title: 'Music Streaming Platform',
+    description: 'Full-stack music platform with user authentication, playlist management, and audio streaming. Built for Starlight Music with scalable architecture.',
+    technologies: ['Next.js', 'Node.js', 'MongoDB', 'AWS S3'],
     liveUrl: '#',
     githubUrl: '#',
     category: 'Full Stack',
@@ -19,30 +19,30 @@ const projects = [
   },
   {
     id: 2,
-    title: 'Task Management App',
-    description: 'Collaborative task management tool with real-time updates, drag-and-drop functionality, and team features for modern workplaces.',
-    technologies: ['React', 'Node.js', 'Socket.io', 'MongoDB'],
+    title: 'Artist Dashboard',
+    description: 'Comprehensive dashboard for artists to manage their releases, view analytics, and track revenue. Real-time data visualization and reporting.',
+    technologies: ['React', 'Node.js', 'Chart.js', 'MongoDB'],
     liveUrl: '#',
     githubUrl: '#',
     category: 'Full Stack',
     color: 'from-blue-500 to-cyan-500',
-    featured: false
+    featured: true
   },
   {
     id: 3,
-    title: 'Weather Dashboard',
-    description: 'Beautiful weather application with detailed forecasts, location-based weather, and interactive charts. Responsive and intuitive.',
-    technologies: ['React', 'Weather API', 'Chart.js', 'CSS3'],
+    title: 'Content Management System',
+    description: 'Custom CMS for music label operations with metadata management, asset organization, and automated workflows for content delivery.',
+    technologies: ['React', 'Express.js', 'MongoDB', 'AWS'],
     liveUrl: '#',
     githubUrl: '#',
-    category: 'Frontend',
+    category: 'Full Stack',
     color: 'from-orange-500 to-red-500',
     featured: false
   },
   {
     id: 4,
-    title: 'Social Media API',
-    description: 'RESTful API for social media platform with authentication, posts, comments, and user management. Highly scalable architecture.',
+    title: 'Music Analytics API',
+    description: 'RESTful API for music analytics with streaming data aggregation, user behavior tracking, and performance metrics. Handles 1000+ daily requests.',
     technologies: ['Node.js', 'Express', 'MongoDB', 'JWT'],
     liveUrl: '#',
     githubUrl: '#',
@@ -53,8 +53,8 @@ const projects = [
   {
     id: 5,
     title: 'Portfolio Website',
-    description: 'Modern portfolio website with animations, contact form, and CMS integration for easy content management and updates.',
-    technologies: ['Next.js', 'Framer Motion', 'Contentful', 'Vercel'],
+    description: 'Modern portfolio website with animations, contact form, and project showcase. Built with performance optimization and SEO best practices.',
+    technologies: ['Next.js', 'Framer Motion', 'TypeScript', 'Vercel'],
     liveUrl: '#',
     githubUrl: '#',
     category: 'Frontend',
@@ -63,14 +63,14 @@ const projects = [
   },
   {
     id: 6,
-    title: 'Real Estate Platform',
-    description: 'Property listing platform with search filters, virtual tours, and mortgage calculator. Complete real estate solution.',
-    technologies: ['React', 'Node.js', 'PostgreSQL', 'AWS S3'],
+    title: 'Event Management Platform',
+    description: 'Platform for managing music events with ticket sales, venue booking, and artist coordination. Complete event lifecycle management.',
+    technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
     liveUrl: '#',
     githubUrl: '#',
     category: 'Full Stack',
     color: 'from-yellow-500 to-orange-500',
-    featured: true
+    featured: false
   }
 ];
 

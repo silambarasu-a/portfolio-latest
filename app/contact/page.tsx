@@ -70,26 +70,26 @@ export default function Contact() {
     {
       icon: Mail,
       title: 'Email',
-      value: 'contact@yourportfolio.com',
-      link: 'mailto:contact@yourportfolio.com',
+      value: 'silambarasu@icloud.com',
+      link: 'mailto:silambarasu@icloud.com',
       color: 'from-purple-500 to-pink-500',
       description: 'Drop me a line anytime'
     },
     {
-      icon: Phone,
-      title: 'Phone',
-      value: '+1 (555) 123-4567',
-      link: 'tel:+15551234567',
-      color: 'from-blue-500 to-cyan-500',
-      description: 'Available during business hours'
-    },
-    {
       icon: MapPin,
       title: 'Location',
-      value: 'Your City, Country',
+      value: 'Bangalore, India',
       link: null,
       color: 'from-orange-500 to-red-500',
-      description: 'Open to remote work'
+      description: 'Open to remote work globally'
+    },
+    {
+      icon: MessageCircle,
+      title: 'Current Role',
+      value: 'Full Stack Developer at Starlight Music',
+      link: null,
+      color: 'from-blue-500 to-cyan-500',
+      description: 'Building scalable music platforms'
     }
   ];
 
@@ -125,8 +125,8 @@ export default function Contact() {
             </h1>
             
             <p className="text-xl sm:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Have an exciting project in mind? Want to collaborate on something amazing? 
-              I&apos;d love to hear from you and bring your ideas to life.
+              Ready to build scalable web applications? Looking for a Full Stack Developer with proven experience in music industry platforms? 
+              Let&apos;s discuss your project and create something exceptional together.
             </p>
           </motion.div>
         </div>
@@ -150,9 +150,9 @@ export default function Contact() {
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400"> Conversation</span>
                 </h2>
                 <p className="text-xl text-gray-300 leading-relaxed">
-                  I&apos;m always open to discussing new opportunities, creative projects, 
-                  or potential collaborations. Whether you have a specific project in mind 
-                  or just want to explore possibilities, let&apos;s chat!
+                  As a Full Stack Developer at Starlight Music with 3+ years of experience, I specialize in 
+                  building high-performance web applications, optimizing database queries, and creating 
+                  seamless user experiences. Let&apos;s discuss how I can help bring your vision to life.
                 </p>
               </div>
 
@@ -214,7 +214,8 @@ export default function Contact() {
                   <h3 className="font-semibold text-white">Fun Fact</h3>
                 </div>
                 <p className="text-gray-300 text-sm">
-                  I typically respond within 24 hours and love discussing new ideas over virtual coffee! ☕
+                  I typically respond within 24 hours and am always excited to discuss new projects, 
+                  especially in the music, entertainment, or fintech industries! ☕
                 </p>
               </div>
             </motion.div>
@@ -361,8 +362,8 @@ export default function Contact() {
               Ready to Create Something Amazing?
             </h3>
             <p className="text-gray-300 mb-6">
-              Let&apos;s turn your vision into reality. Whether it&apos;s a startup MVP, 
-              enterprise solution, or creative project, I&apos;m here to help.
+              Let&apos;s build something amazing together. Whether you need a music streaming platform, 
+              e-commerce solution, or custom web application, I bring proven expertise from Starlight Music.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-sm text-gray-400">
               <div className="flex items-center gap-1">

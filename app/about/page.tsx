@@ -5,20 +5,20 @@ import { Code2, Users, Trophy, BookOpen, Zap, Target, Coffee, Rocket, Brain, Sta
 
 const skills = [
   { 
-    category: 'Frontend Mastery', 
-    techs: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion'],
+    category: 'Frontend Development', 
+    techs: ['React', 'Next.js', 'TypeScript', 'JavaScript', 'Tailwind CSS', 'HTML5', 'CSS3'],
     icon: Code2,
     color: 'from-purple-500 to-pink-500'
   },
   { 
-    category: 'Backend Excellence', 
-    techs: ['Node.js', 'Express', 'MongoDB', 'Mongoose', 'REST APIs'],
+    category: 'Backend Development', 
+    techs: ['Node.js', 'Express.js', 'MongoDB', 'Mongoose', 'REST APIs', 'GraphQL', 'JWT'],
     icon: Rocket,
     color: 'from-blue-500 to-cyan-500'
   },
   { 
-    category: 'Tools & Workflow', 
-    techs: ['Git', 'Docker', 'AWS', 'Vercel', 'Figma'],
+    category: 'DevOps & Tools', 
+    techs: ['Docker', 'AWS', 'Git', 'CI/CD', 'Vercel', 'Webpack', 'Jest'],
     icon: Zap,
     color: 'from-orange-500 to-red-500'
   }
@@ -26,25 +26,25 @@ const skills = [
 
 const experiences = [
   {
-    title: 'Senior Full Stack Developer',
-    company: 'Tech Company',
-    period: '2022 - Present',
-    description: 'Leading development of modern web applications using React, Next.js, and Node.js. Mentoring junior developers and architecting scalable solutions.',
-    achievements: ['Led team of 5 developers', 'Increased performance by 40%', 'Shipped 15+ features']
+    title: 'Full Stack Developer',
+    company: 'Starlight Music',
+    period: '2021 - Present',
+    description: 'Architecting and deploying multiple customer-facing platforms in the JavaScript ecosystem. Specializing in performance optimization, secure API development, and scalable database design.',
+    achievements: ['Improved page load times by 40%', 'Built APIs handling 1,000+ daily requests', 'Reduced query latency by 60%', 'Achieved 95%+ test coverage']
   },
   {
-    title: 'Full Stack Developer',
-    company: 'Digital Agency',
-    period: '2020 - 2022',
-    description: 'Developed and maintained multiple client projects, focusing on responsive design and performance optimization.',
-    achievements: ['Delivered 20+ projects', 'Improved code quality', 'Client satisfaction: 98%']
+    title: 'Software Developer',
+    company: 'Previous Experience',
+    period: '2019 - 2021',
+    description: 'Developed full-stack web applications with focus on responsive design, user experience, and modern development practices. Gained expertise in JavaScript ecosystem and DevOps.',
+    achievements: ['Delivered 20+ projects', 'Mastered React/Node.js stack', 'Implemented CI/CD pipelines']
   },
   {
     title: 'Junior Developer',
-    company: 'Startup',
-    period: '2019 - 2020',
-    description: 'Started my journey in web development, learning modern frameworks and building foundational skills.',
-    achievements: ['Built first full-stack app', 'Learned 5+ technologies', 'Contributed to open source']
+    company: 'Entry Level Position',
+    period: '2018 - 2019',
+    description: 'Started professional journey in web development, learning modern frameworks and building foundational skills in full-stack development.',
+    achievements: ['Built first production app', 'Learned 5+ technologies', 'Contributed to open source']
   }
 ];
 
@@ -81,8 +81,8 @@ export default function About() {
             </h1>
             
             <p className="text-xl sm:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Passionate full-stack developer with 4+ years of experience creating 
-              digital experiences that users love. Always learning, always building.
+              Innovative Full Stack Developer with 3+ years of experience at Starlight Music, 
+              architecting scalable applications and optimizing performance. Passionate about clean code and continuous learning.
             </p>
           </motion.div>
         </div>
@@ -107,20 +107,19 @@ export default function About() {
               
               <div className="space-y-6 text-gray-300 leading-relaxed">
                 <p>
-                  My journey into web development started with curiosity and grew into a passion 
-                  for creating digital experiences that make a difference. What began as tinkering 
-                  with HTML and CSS has evolved into architecting full-stack applications that 
-                  serve thousands of users.
+                  My journey as a Full Stack Developer at Starlight Music has been marked by 
+                  architecting and deploying multiple customer-facing platforms in the JavaScript ecosystem. 
+                  I've improved average page load times by 40% through advanced caching, code-splitting, and CDN optimization.
                 </p>
                 <p>
-                  I specialize in the MERN stack and have extensive experience with Next.js for 
-                  building modern, performant applications. I believe in writing clean, maintainable 
-                  code and staying ahead of the curve with the latest technologies and best practices.
+                  I specialize in building secure RESTful APIs with Node.js + Express that handle 1,000+ daily requests 
+                  with 99.9% uptime. My expertise in MongoDB optimization includes indexing and aggregation strategies 
+                  that reduced critical query latency by 60%, enabling smooth scaling during a 10× user growth period.
                 </p>
                 <p>
-                  When I&apos;m not coding, you can find me contributing to open-source projects, 
-                  mentoring aspiring developers, or exploring the latest trends in web development 
-                  over a good cup of coffee.
+                  I champion DevOps culture by containerizing services with Docker and automating CI/CD pipelines, 
+                  reducing deployment time from hours to minutes. I also mentor junior developers and enforce 
+                  engineering best practices, achieving 95%+ unit-test coverage.
                 </p>
               </div>
             </motion.div>
@@ -134,10 +133,10 @@ export default function About() {
               className="grid grid-cols-2 gap-6"
             >
               {[
-                { icon: Code2, number: "50+", label: "Projects", color: "from-purple-500 to-pink-500" },
-                { icon: Users, number: "30+", label: "Clients", color: "from-blue-500 to-cyan-500" },
-                { icon: Trophy, number: "4+", label: "Years", color: "from-orange-500 to-red-500" },
-                { icon: Coffee, number: "1000+", label: "Coffees", color: "from-yellow-500 to-orange-500" }
+                { icon: Code2, number: "10+", label: "Projects", color: "from-purple-500 to-pink-500" },
+                { icon: Users, number: "15+", label: "Clients", color: "from-blue-500 to-cyan-500" },
+                { icon: Trophy, number: "3+", label: "Years", color: "from-orange-500 to-red-500" },
+                { icon: Coffee, number: "800+", label: "Coffees", color: "from-yellow-500 to-orange-500" }
               ].map((stat, index) => {
                 const IconComponent = stat.icon;
                 return (

@@ -8,22 +8,22 @@ export default function Home() {
   const skills = [
     { 
       icon: Code2, 
-      name: 'Frontend Mastery', 
-      description: 'React, Next.js, TypeScript, Tailwind',
+      name: 'Frontend Development', 
+      description: 'React.js, Next.js, TypeScript, Tailwind CSS, Framer Motion',
       color: 'from-purple-500 to-pink-500',
       bgColor: 'bg-purple-50'
     },
     { 
       icon: Rocket, 
-      name: 'Backend Excellence', 
-      description: 'Node.js, MongoDB, APIs, Cloud',
+      name: 'Backend & APIs', 
+      description: 'Node.js, Express.js, MongoDB, RESTful APIs, JWT Authentication',
       color: 'from-blue-500 to-cyan-500',
       bgColor: 'bg-blue-50'
     },
     { 
       icon: Sparkles, 
-      name: 'Modern Design', 
-      description: 'UI/UX, Animations, User Experience',
+      name: 'DevOps & Cloud', 
+      description: 'Docker, AWS (EC2/S3), CI/CD Pipelines, Performance Optimization',
       color: 'from-orange-500 to-red-500',
       bgColor: 'bg-orange-50'
     }
@@ -81,8 +81,8 @@ export default function Home() {
             </h1>
             
             <p className="text-xl sm:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
-              Full-stack developer specializing in creating stunning, high-performance web applications 
-              that users love. Bringing ideas to life with modern tech and creative solutions.
+              Full Stack Developer at Starlight Music with 3+ years of experience architecting customer-facing platforms, 
+              optimizing performance by 40%, and building secure APIs handling 1,000+ daily requests with 99.9% uptime.
             </p>
           </motion.div>
           
@@ -124,16 +124,16 @@ export default function Home() {
             className="grid grid-cols-3 gap-8 max-w-lg mx-auto"
           >
             <div className="text-center">
-              <div className="text-3xl font-bold text-white mb-1">50+</div>
+              <div className="text-3xl font-bold text-white mb-1">10+</div>
               <div className="text-gray-400 text-sm">Projects</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-white mb-1">4+</div>
+              <div className="text-3xl font-bold text-white mb-1">3+</div>
               <div className="text-gray-400 text-sm">Years</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-white mb-1">30+</div>
-              <div className="text-gray-400 text-sm">Clients</div>
+              <div className="text-3xl font-bold text-white mb-1">99.9%</div>
+              <div className="text-gray-400 text-sm">Uptime</div>
             </div>
           </motion.div>
         </div>

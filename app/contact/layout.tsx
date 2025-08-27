@@ -1,13 +1,13 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Contact | Your Portfolio - Get In Touch',
-  description: 'Get in touch for web development projects, collaborations, or opportunities. Contact a full-stack developer experienced in React, Next.js, Node.js, and MongoDB.',
-  keywords: 'contact, hire developer, web development services, freelance developer, react developer contact',
+  title: 'Contact | Silambarasu - Get In Touch',
+  description: 'Get in touch for web development projects, collaborations, or opportunities. Contact a full-stack developer at Starlight Music experienced in React, Next.js, Node.js, and MongoDB.',
+  keywords: 'contact, hire developer, web development services, silambarasu, react developer contact, starlight music developer',
   openGraph: {
-    title: 'Contact | Your Portfolio - Get In Touch',
+    title: 'Contact | Silambarasu - Get In Touch',
     description: 'Get in touch for web development projects, collaborations, or opportunities.',
-    url: 'https://yourportfolio.com/contact',
+    url: `${process.env.NEXT_PUBLIC_PORTFOLIO_URL}/contact`,
   },
 };
 
