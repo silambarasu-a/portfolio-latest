@@ -32,21 +32,7 @@ const experiences = [
     company: 'Starlight Music',
     period: '2021 - Present',
     description: 'Architecting and deploying multiple customer-facing platforms in the JavaScript ecosystem. Specializing in performance optimization, secure API development, and scalable database design.',
-    achievements: ['Improved page load times by 40%', 'Built APIs handling 1,000+ daily requests', 'Reduced query latency by 60%', 'Achieved 95%+ test coverage']
-  },
-  {
-    title: 'Software Developer',
-    company: 'Previous Experience',
-    period: '2019 - 2021',
-    description: 'Developed full-stack web applications with focus on responsive design, user experience, and modern development practices. Gained expertise in JavaScript ecosystem and DevOps.',
-    achievements: ['Delivered 20+ projects', 'Mastered React/Node.js stack', 'Implemented CI/CD pipelines']
-  },
-  {
-    title: 'Junior Developer',
-    company: 'Entry Level Position',
-    period: '2018 - 2019',
-    description: 'Started professional journey in web development, learning modern frameworks and building foundational skills in full-stack development.',
-    achievements: ['Built first production app', 'Learned 5+ technologies', 'Contributed to open source']
+    achievements: ['Improved page load times by 40%', 'Built APIs handling 1,000+ daily requests', 'Reduced query latency by 60%', 'Achieved 95%+ test coverage', 'Mastered React/Node.js stack']
   }
 ];
 

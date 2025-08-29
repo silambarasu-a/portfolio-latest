@@ -8,10 +8,10 @@ import AnimatedElement from '@/components/AnimatedElement';
 const projects = [
   {
     id: 1,
-    title: 'Music Streaming Platform',
-    description: 'Full-stack music platform with user authentication, playlist management, and audio streaming. Built for Starlight Music with scalable architecture.',
-    technologies: ['Next.js', 'Node.js', 'MongoDB', 'AWS S3'],
-    liveUrl: '#',
+    title: 'Starlight Music - Live Entertainment Platform',
+    description: 'Premier live music entertainment platform for NYC tri-state area. Features online booking system, customizable band experiences, transparent pricing, and hundreds of live performance videos. Technology-driven solution for wedding and event entertainment.',
+    technologies: ['Next.js', 'React', 'MongoDB', 'New Relic', 'AWS', 'SEO Optimization'],
+    liveUrl: 'https://www.starlightmusic.com',
     githubUrl: '#',
     category: 'Full Stack',
     color: 'from-purple-500 to-pink-500',
@@ -19,10 +19,10 @@ const projects = [
   },
   {
     id: 2,
-    title: 'Artist Dashboard',
-    description: 'Comprehensive dashboard for artists to manage their releases, view analytics, and track revenue. Real-time data visualization and reporting.',
-    technologies: ['React', 'Node.js', 'Chart.js', 'MongoDB'],
-    liveUrl: '#',
+    title: 'StarBridge - CRM/CMS Platform',
+    description: 'Administrative interface and content management system for Starlight Music. Handles artist management, booking operations, performance tracking, and business analytics with comprehensive dashboard functionality.',
+    technologies: ['React', 'JavaScript', 'Webpack', 'New Relic', 'SPA Architecture'],
+    liveUrl: 'https://starbridge.starlightmusic.com',
     githubUrl: '#',
     category: 'Full Stack',
     color: 'from-blue-500 to-cyan-500',
@@ -30,48 +30,48 @@ const projects = [
   },
   {
     id: 3,
-    title: 'Content Management System',
-    description: 'Custom CMS for music label operations with metadata management, asset organization, and automated workflows for content delivery.',
-    technologies: ['React', 'Express.js', 'MongoDB', 'AWS'],
-    liveUrl: '#',
+    title: 'Clubhouse Central NY - Childcare Platform',
+    description: 'Innovative after-school care and enrichment center website for K-6 students in Hartsdale, NY. Features flexible scheduling, shuttle services, activity programs, and integrated booking system with Calendly integration.',
+    technologies: ['Next.js 15', 'Server-Side Rendering', 'Google Analytics', 'Calendly API', 'SEO Optimization'],
+    liveUrl: 'https://clubhousecentralny.com',
     githubUrl: '#',
     category: 'Full Stack',
     color: 'from-orange-500 to-red-500',
-    featured: false
-  },
-  {
-    id: 4,
-    title: 'Music Analytics API',
-    description: 'RESTful API for music analytics with streaming data aggregation, user behavior tracking, and performance metrics. Handles 1000+ daily requests.',
-    technologies: ['Node.js', 'Express', 'MongoDB', 'JWT'],
-    liveUrl: '#',
-    githubUrl: '#',
-    category: 'Backend',
-    color: 'from-green-500 to-teal-500',
     featured: true
   },
   {
-    id: 5,
-    title: 'Portfolio Website',
-    description: 'Modern portfolio website with animations, contact form, and project showcase. Built with performance optimization and SEO best practices.',
-    technologies: ['Next.js', 'Framer Motion', 'TypeScript', 'Vercel'],
-    liveUrl: '#',
-    githubUrl: '#',
+    id: 4,
+    title: 'Portfolio Website v1',
+    description: 'Modern portfolio website showcasing 3+ years of full-stack development experience. Features performance optimizations (40% improvement) and 99.9% uptime achievement.',
+    technologies: ['React.js', 'Netlify'],
+    liveUrl: 'https://silambarasu.netlify.app',
+    githubUrl: 'https://github.com/silambarasu-a/Portfolio_project',
     category: 'Frontend',
     color: 'from-indigo-500 to-purple-500',
     featured: false
   },
   {
-    id: 6,
-    title: 'Event Management Platform',
-    description: 'Platform for managing music events with ticket sales, venue booking, and artist coordination. Complete event lifecycle management.',
-    technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-    liveUrl: '#',
-    githubUrl: '#',
+    id: 5,
+    title: 'Portfolio Website v2 (Current)',
+    description: 'Latest iteration of portfolio with advanced animations, MongoDB contact form integration, email service, and comprehensive SEO optimization. Built with Next.js 15 and modern development practices.',
+    technologies: ['Next.js 15', 'MongoDB', 'Framer Motion', 'TypeScript', 'Nodemailer'],
+    liveUrl: 'https://silambarasu.vercel.app',
+    githubUrl: 'https://github.com/silambarasu-a/portfolio-latest',
     category: 'Full Stack',
-    color: 'from-yellow-500 to-orange-500',
+    color: 'from-green-500 to-teal-500',
     featured: false
-  }
+  },
+  // {
+  //   id: 6,
+  //   title: 'Music Analytics & Performance API',
+  //   description: 'Backend infrastructure powering Starlight Music platforms. Handles secure API requests, performance monitoring, real-time analytics, and business intelligence with high-availability architecture.',
+  //   technologies: ['Node.js', 'Express', 'MongoDB', 'JWT', 'New Relic'],
+  //   liveUrl: '#',
+  //   githubUrl: '#',
+  //   category: 'Backend',
+  //   color: 'from-yellow-500 to-orange-500',
+  //   featured: false
+  // }
 ];
 
 const categories = ['All', 'Full Stack', 'Frontend', 'Backend'];
@@ -156,7 +156,7 @@ export default function Projects() {
                 delay={index * 0.1}
                 className="group relative"
               >
-                <div className="relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl overflow-hidden hover:bg-white/10 transition-all duration-500 transform hover:scale-105">
+                <div className="relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl overflow-hidden hover:bg-white/10 transition-all duration-500 transform hover:scale-105 h-full flex flex-col">
                   
                   {/* Featured Badge */}
                   {project.featured && (
@@ -207,11 +207,11 @@ export default function Projects() {
                     </div>
                   </div>
 
-                  <div className="p-6">
+                  <div className="p-6 flex-1 flex flex-col">
                     <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">
                       {project.title}
                     </h3>
-                    <p className="text-gray-300 mb-4 text-sm leading-relaxed">
+                    <p className="text-gray-300 mb-4 text-sm leading-relaxed flex-1">
                       {project.description}
                     </p>
 
@@ -228,7 +228,7 @@ export default function Projects() {
                     </div>
 
                     {/* Project Links */}
-                    <div className="flex gap-3">
+                    <div className="flex gap-3 mt-auto">
                       <a
                         href={project.liveUrl}
                         target="_blank"
