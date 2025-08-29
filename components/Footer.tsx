@@ -7,9 +7,9 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
   
   const socialLinks = [
-    { href: process.env.NEXT_PUBLIC_GITHUB_URL || 'https://github.com/silambarasu', icon: Github, label: 'GitHub', color: 'hover:text-gray-300' },
-    { href: process.env.NEXT_PUBLIC_LINKEDIN_URL || 'https://linkedin.com/in/silambarasu', icon: Linkedin, label: 'LinkedIn', color: 'hover:text-blue-400' },
-    { href: 'https://twitter.com/silambarasu', icon: Twitter, label: 'Twitter', color: 'hover:text-cyan-400' },
+    { href: process.env.NEXT_PUBLIC_GITHUB_URL || 'https://github.com/silambarasu-a', icon: Github, label: 'GitHub', color: 'hover:text-gray-300' },
+    { href: process.env.NEXT_PUBLIC_LINKEDIN_URL || 'https://www.linkedin.com/in/silambarasu-a/', icon: Linkedin, label: 'LinkedIn', color: 'hover:text-blue-400' },
+    { href: 'https://x.com/silambarasu_a', icon: Twitter, label: 'X', color: 'hover:text-cyan-400' },
     { href: 'mailto:silambarasu@icloud.com', icon: Mail, label: 'Email', color: 'hover:text-purple-400' }
   ];
 
