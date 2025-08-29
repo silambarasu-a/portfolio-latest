@@ -2,7 +2,8 @@
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, MapPin, Send, Loader2, CheckCircle, AlertCircle, MessageCircle, Star, Sparkles, Zap, Heart, Coffee } from 'lucide-react';
+import { Mail, MapPin, Send, Loader2, CheckCircle, AlertCircle, MessageCircle, Star, Zap, Heart, Coffee } from 'lucide-react';
+import Logo from '@/components/Logo';
 
 interface FormData {
   name: string;
@@ -230,9 +231,12 @@ export default function Contact() {
             >
               <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 shadow-2xl">
                 <div className="flex items-center gap-3 mb-8">
-                  <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center">
-                    <Sparkles className="w-5 h-5 text-white" />
-                  </div>
+                <Logo
+                  variant="icon" 
+                  width={38} 
+                  height={38}
+                  color="white"
+                />
                   <h3 className="text-2xl font-bold text-white">Send a Message</h3>
                 </div>
 

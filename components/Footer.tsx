@@ -26,6 +26,7 @@ const Footer = () => {
             <Logo 
               variant="icon" 
               width={44} 
+              height={44}
               color="white"
             />
             <span className="font-black text-2xl text-white">

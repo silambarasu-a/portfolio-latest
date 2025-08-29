@@ -46,6 +46,7 @@ const Navigation = () => {
             <Logo 
               variant="icon" 
               width={40} 
+              height={40}
               color="white" 
               className="group-hover:text-purple-400 transition-colors duration-300" 
             />
